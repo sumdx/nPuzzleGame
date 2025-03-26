@@ -9,12 +9,13 @@ public class Board
     private Cell[][] board;
     private GridPane gridPane;
     VBox vBox;
-    final int NSIZE = 3;
+    private int NSIZE;
     int moves;   
     Text count;
     
-    public Board(){
-       
+    public Board(int NSIZE){
+           
+        this.NSIZE=NSIZE;
         final int HIGHEST = (NSIZE*NSIZE) - 1 ;
         
         board = new Cell[NSIZE][NSIZE];
@@ -46,15 +47,16 @@ public class Board
             }
         }
        
-        Text countText = new Text(100,100, "Count");
+        Text countText = new Text(100,100, "No, of moves");
         count = new Text(String.valueOf(moves));
         
         Button restartButton = new Button("Restart");
+        restartButton.setStyle("-fx-font-size: 20px; -fx-padding: 10px 20px;");
         restartButton.setOnAction(this::processNewGameClick);
         
         
-        FlowPane pane = new FlowPane(countText, count, restartButton);
-        
+        FlowPane pane = new FlowPane(0,50,countText, count, restartButton);
+        pane.setStyle("-fx-font-size: 20px; -fx-padding: 10px 20px;");
         
         vBox = new VBox(gridPane, pane);
         
@@ -62,6 +64,8 @@ public class Board
         shuffle();
         moves = 0;
     }
+    
+    
     
     private void processNewGameClick(ActionEvent event){
         
@@ -164,6 +168,7 @@ public class Board
     public VBox getVBox(){
         
         return vBox;
+        
     }
     
     

@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Board
-comment1.params=
-comment1.target=Board()
+comment1.params=NSIZE
+comment1.target=Board(int)
 comment2.params=event
 comment2.target=void\ processNewGameClick(javafx.event.ActionEvent)
 comment3.params=event

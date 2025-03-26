@@ -1,14 +1,14 @@
 #BlueJ package file
-dependency1.from=NPuzzle
-dependency1.to=Board
+dependency1.from=Board
+dependency1.to=Cell
 dependency1.type=UsesDependency
-dependency2.from=Board
-dependency2.to=Cell
+dependency2.from=NPuzzle
+dependency2.to=Board
 dependency2.type=UsesDependency
-editor.fx.0.height=0
-editor.fx.0.width=0
+editor.fx.0.height=945
+editor.fx.0.width=1512
 editor.fx.0.x=0
-editor.fx.0.y=0
+editor.fx.0.y=37
 objectbench.height=115
 objectbench.width=1488
 package.divider.horizontal=0.5998659517426274
